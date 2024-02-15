@@ -18,9 +18,8 @@ no Caixa você pode:
 
 # oque é necessario para executar o programa?
 
-**XAMPP
-MySQL Connector
-**
+****XAMPP***
+***MySQL Connector****
 
 # Comandos para criar o SQL
 Criando o SQL (ponha o nome da Database de "central"):
