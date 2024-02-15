@@ -1,0 +1,41 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <RootNamespace>Aplicativo_de_Caixa_de_Super_Mercado</RootNamespace>
+    <Nullable>enable</Nullable>
+    <UseWindowsForms>true</UseWindowsForms>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Sub\NovaPasta\**" />
+    <EmbeddedResource Remove="Sub\NovaPasta\**" />
+    <None Remove="Sub\NovaPasta\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Remove="Gerente.cs" />
+    <Compile Remove="Gerente.Designer.cs" />
+    <Compile Remove="Sub\SubRelatoriosGerais.cs" />
+    <Compile Remove="Sub\SubRelatoriosGerais.Designer.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Remove="Caixa.resx" />
+    <EmbeddedResource Remove="Gerente.resx" />
+    <EmbeddedResource Remove="Sub\SubRelatoriosGerais.resx" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="MySql.Data" Version="8.3.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="MySql.Data">
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\MySQL\MySQL Connector NET 8.3.0\MySql.Data.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+</Project>
