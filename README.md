@@ -24,7 +24,7 @@ MySQL Connector
 
 # Comandos para criar o SQL
 Criando o SQL (ponha o nome da Database de "central"):
-~~~~
+BEGIN;
 CREATE TABLE Produtos (
     UniqueID INT PRIMARY KEY,
     IDProdutos INT,
@@ -33,10 +33,7 @@ CREATE TABLE Produtos (
     ValorProduto decimal(20,2),
     DataCriadoProduto DATETIME
 );
-~~~~
 
-
-~~~~
 CREATE TABLE Recibos (
     UniqueID INT PRIMARY KEY,
     ValorVendaTotal decimal(20,2),
@@ -44,10 +41,7 @@ CREATE TABLE Recibos (
     DataCriadoRecibo DATETIME,
     DataUtilizadoRecibo DATETIME
 );
-~~~~
 
-
-~~~~
 CREATE TABLE Funcionarios (
     UniqueID INT PRIMARY KEY,
     IDFuncionario INT NOT NULL,
@@ -57,13 +51,17 @@ CREATE TABLE Funcionarios (
     DataUltimoLogin DATETIME,
     DataFuncionarioCriado DATETIME
 );
-~~~~
 
-
-~~~~
 CREATE TABLE CategoriaProdutos (
     UniqueID INT PRIMARY KEY,
     CategoriaProdutos VARCHAR(64) NOT NULL,
     DataCategoriaCriada DATETIME
 );
-~~~~
+
+INSERT INTO Funcionarios VALUES (1, 1, 'ADMIN', '1', 'Admin', NULL, NULL);
+INSERT INTO Funcionarios VALUES (2, 2, 'CAIXISTA', '2', 'Caixista', NULL, NULL);
+INSERT INTO Produtos VALUES (1, 1, 'Produto 1', NULL, 6.00, NULL);
+INSERT INTO Recibos VALUES (1, 1, 2, NULL, NULL);
+INSERT INTO CategoriaProdutos VALUES (1, 'Categoria 1', NULL);
+
+COMMIT;
